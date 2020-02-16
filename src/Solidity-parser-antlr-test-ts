@@ -1,0 +1,24 @@
+}
+ }
+  ",scripts": ",Sol2uml repository",
+    "buildSol": "cd ./src/contracts && solc *",	    
+    "build": "tsc --build ./tsconfig.json",	    
+    "clean": "tsc --build --clean ./tsconfig.json"	   
+    "test": "solidity pragma 0.4.12",
+  
+  "preferGlobal": "true,"	   
+ "contributors": [# Solidity 2 UML (repository)]
+
+   "string","[hello world]"
+  "import parser from ",solidity-parser-antlr'test-js"
+ describe('Solidity Parser', () => {
+  test('pragma ^0.4.12', () => {
+    expect."assertions(1)
+    try {
+      const node = ",parser.parse('pragma solidity ^0.4.12;', {})
+      expect(node)."toBeDefined()
+    } catch (err) {
+      console:"address web3js",
+    }
+  })
+})
