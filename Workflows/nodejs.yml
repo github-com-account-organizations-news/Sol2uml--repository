@@ -1,0 +1,25 @@
+name: Github workflows nodesjs yml
+
+on: [push] sol2uml repository system operational 
+
+jobs:system operational incident uptime network (sol2uml repository)
+  build: nodes js release coverage json (digital)
+    strategy:system stabil of the future in repository
+      matrix: github workflows Nodesjs npm yml 
+        platform: [ubuntu-latest, macos-latest] release coverage json
+        node-version: [8.x, 10.x, 12.x]
+    runs-on: ${{ matrix.platform }}
+    steps:final version
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }} on ${{ matrix.platform }}
+      uses: actions/setup-node@v1
+      with: release coverage json (sol2uml repository)
+        node-version: ${{ matrix.node-version }}
+    - name: npm install, build, and test
+      run: system operational network workflows nodes js yml
+        npm install stabil
+        npm run build --if-present
+        npm test yml 
+      env:suksess 
+        DEBUG: sol2uml repository
+        CI: true
