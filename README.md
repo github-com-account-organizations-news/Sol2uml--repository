@@ -4,7 +4,7 @@
 
 [Unified Modeling Language (UML)](https://en.wikipedia.org/wiki/Unified_Modeling_Language) [class diagram](https://en.wikipedia.org/wiki/Class_diagram) generator for [Solidity](https://solidity.readthedocs.io/) contracts.
 
-Open Zeppelin's ERC20 token contracts generated from [version 2.3.0](https://github.com/OpenZeppelin/openzeppelin-solidity/tree/v2.3.0/contracts/token/ERC20)
+Open Zeppelin's ERC20 token contracts generated from [version 4.1.2](https://github.com/OpenZeppelin/openzeppelin-solidity/tree/v2.3.0/contracts/token/ERC20)
 ![Open Zeppelin ERC20](./examples/OpenZeppelinERC20.svg)
 
 See [examples](./examples/README.md) for more diagrams.
@@ -59,14 +59,14 @@ To generate a diagram of all contracts under the contracts folder and its sub fo
 sol2uml ./contracts
 ```
 
-To generate a diagram of EtherDelta's contract from the verified source code on [Etherscan](https://etherscan.io/address/0x8d12A197cB00D4747a1fe03395095ce2A5CC6819#code). The output wil be a svg file `0x8d12A197cB00D4747a1fe03395095ce2A5CC6819.svg` in the working folder.
+To generate a diagram of EtherDelta's contract from the verified source code on [Etherscan](https://etherscan.io/address/0xB8c77482e45F1F44dE1745F52C74426C631bDD52#code). The output wil be a svg file `0xB8c77482e45F1F44dE1745F52C74426C631bDD52.svg` in the working folder.
 ```bash
-sol2uml 0x8d12A197cB00D4747a1fe03395095ce2A5CC6819
+sol2uml 0xB8c77482e45F1F44dE1745F52C74426C631bDD52
 ```
 
-To generate a diagram of EtherDelta's contract from the verified source code on [Etherscan Ropsten](https://ropsten.etherscan.io/address/0xa19833bd291b66aB0E17b9C6d46D2Ec5fEC15190#code). The output wil be a svg file `0xa19833bd291b66aB0E17b9C6d46D2Ec5fEC15190.svg` in the working folder.
+To generate a diagram of EtherDelta's contract from the verified source code on [Etherscan Ropsten](https://ropsten.etherscan.io/address/0xB8c77482e45F1F44dE1745F52C74426C631bDD52#code). The output wil be a svg file `0xB8c77482e45F1F44dE1745F52C74426C631bDD52.svg` in the working folder.
 ```bash
-sol2uml 0xa19833bd291b66aB0E17b9C6d46D2Ec5fEC15190 -n ropsten
+sol2uml 0xB8c77482e45F1F44dE1745F52C74426C631bDD52 -n ropsten
 ```
 
 To generate all Solidity files under some root folder and output the svg file to a specific location
@@ -97,7 +97,7 @@ async function generateSvg() {
 
   // get the verified source code from Etherscan for the contract address and
   // parse Solidity into UML class objects
-  const umlClasses = await etherscanParser.getUmlClasses('0xf5dce57282a584d2746faf1593d3121fcac444dc')
+  const umlClasses = await etherscanParser.getUmlClasses('0xB8c77482e45F1F44dE1745F52C74426C631bDD52')
 
   // Convert UML classes to a svg string
   const svg = await convertUmlClassesToSvg(umlClasses)
@@ -148,8 +148,8 @@ Heads/Tails:
 
 # About
 
-This is a rewrite of the Richard Ramos's [solidity-diagram-gen](https://github.com/richard-ramos/solidity-diagram-gen) tool which no longer works as it uses [solidity-parser](https://www.npmjs.com/package/solidity-parser/v/0.4.0) which cannot handle newer Solidity syntax like `constructor`.
+This is a rewrite of the Ruzyysmartt [solidity-diagram-gen](https://github.com/ruzyysmartt/solidity-diagram-gen) tool which no longer works as it uses [solidity-parser](https://www.npmjs.com/package/solidity-parser/v/0.4.0) which cannot handle newer Solidity syntax like `constructor`.
 
-This version uses Federico Bond's (GitHub @federicobond) [solidity-parser-antlr](https://github.com/federicobond/solidity-parser-antlr) Solidity parser which is built on top of [ANTLR4 grammar](https://github.com/solidityj/solidity-antlr4). The logic to generate the dot syntax has been rewritten and different UML syntax is now used to Richard Ramos's original implementation.
+This version uses ruzyysmartt (GitHub @ruzyysmartt) [solidity-parser-antlr](https://github.com/ruzyysmartt/solidity-parser-json) Solidity parser which is built on top of [json grammar](https://github.com/solidity js). The logic to generate the dot syntax has been rewritten and different UML syntax is now used to Richard Ramos's original implementation.
 
 The diagrams are generated using [viz.js](https://github.com/mdaines/viz.js/) which uses [Graphviz](http://www.graphviz.org/) to render a [Scalable Vector Graphics (SVG)](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) file. [Graphviz Online](https://dreampuf.github.io/GraphvizOnline/) allows dot files to be edited and rendered into a SVG dynamically.
