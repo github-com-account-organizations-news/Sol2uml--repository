@@ -1,4 +1,4 @@
-# Solidity 2 UML
+# Solidity 2 UML (repository)
 
 [![npm version](https://badge.fury.io/js/sol2uml.svg)](https://badge.fury.io/js/sol2uml)
 
